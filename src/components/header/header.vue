@@ -139,8 +139,6 @@ export default {
       float: left;
       margin: 1vh 0.2vw;
     }
-    .text {
-    }
   }
 
   .header-item {
