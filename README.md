@@ -1,5 +1,8 @@
 # demo_vue2.0
 
+## desc
+It`s my vue-frame,include: basicPages,vuex,Axios,router,routerProtect,token,mock,viewUI(and my sider).
+
 ## Project setup
 ```
 npm install
