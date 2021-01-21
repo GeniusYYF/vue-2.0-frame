@@ -63,5 +63,22 @@ module.exports = {
     // },
     // pluginOptions: {
     //     // ...
-    // }
+    // },
+    // 加载less加载器，路径：./public/css/common.less
+    chainWebpack: config => {
+        const oneOfsMap = config.module.rule('less').oneOfs.store
+        oneOfsMap.forEach(item => {
+            item
+                .use('sass-resources-loader')
+                .loader('sass-resources-loader')
+                .options({
+                    // Provide path to the file with resources
+                    resources: './public/css/common.less',
+
+                    // Or array of paths
+                    //   resources: ['./path/to/vars.scss', './path/to/mixins.scss']
+                })
+                .end()
+        })
+    }
 };
